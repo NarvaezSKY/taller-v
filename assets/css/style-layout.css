@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+body {
+    background-color: rgb(82, 80, 80);
+    color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.container {
+    width: 90%;
+    margin: 20px auto;
+    display: grid;
+    grid-gap: 20px;
+    /*grid-template-columns: 40% 40% 20%;
+    grid-template-rows: repeat(4, auto);*/
+    grid-template-areas: "header header header" "container container sidebar" "widget1 widget2 sidebar" "footer footer footer";
+}
+
+.texto {
+    text-align: justify;
+}
+
+.container .cabeza {
+    background-color: rgb(172, 172, 172);
+    /*grid-column: span 3;*/
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: header;
+}
+
+.container .contenido {
+    /*grid-column: span 2;*/
+    background-color: rgba(255, 255, 255, 0.174);
+    grid-area: container;
+}
+
+.container .sidebar {
+    background-color: rgba(255, 255, 255, 0.174);
+    /*grid-row: span 2;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: sidebar;
+}
+
+.container .piedepagina {
+    /*grid-column: span 3;*/
+    background-color: rgb(172, 172, 172);
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: footer;
+}
+
+.widget1 {
+    background-color: rgba(255, 255, 255, 0.174);
+    text-align: justify;
+    grid-area: widget1;
+}
+
+.widget2 {
+    background-color: rgba(255, 255, 255, 0.174);
+    text-align: justify;
+    grid-area: widget2;
+}
+
+@media screen and (max-width: 700px) {
+    body {
+        background-color: black;
+    }
+    .container {
+        grid-template-areas: "header header header" "container container container" "sidebar sidebar sidebar" "widget1 widget1 widget2" "footer footer footer";
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    body {
+        background-color: rgb(116, 116, 116);
+    }
+}

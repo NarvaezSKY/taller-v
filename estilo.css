@@ -1,0 +1,300 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-image: url(/assets/images/backgroundimg.jpg);
+
+    background-size: cover;
+}
+
+.container {
+    width: 90%;
+    margin: 20px auto;
+    grid-gap: 20px;
+    display: grid;
+    grid-template-columns: 25% 25% 25%;
+    grid-template-areas: "header header header header" "nav nav nav nav" "contenido contenido contenido aside" "widget1 widget2 widget3 aside" "widget4 widget4 widget4 widget4" "footer footer footer footer";
+}
+
+.cabeza {
+    grid-area: header;
+    background-color: rgba(117, 116, 116, 0.274);
+    backdrop-filter: blur(7px);
+    height: 250px;
+    position: relative;
+    display: flex;
+    border-radius: 10px;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.705);
+}
+
+.titulo {
+    background-color: rgba(255, 255, 255, 0);
+    width: 80%;
+    position: absolute;
+    right: 3px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    background-color: rgba(255, 187, 0, 0);
+    position: absolute;
+    width: 20%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu {
+    background-color: rgba(171, 149, 149, 0);
+    color: rgb(255, 255, 255);
+    grid-area: nav;
+    height: 50px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    position: sticky;
+    top: 0px;
+    z-index: 3;
+}
+
+.menu2, .menu3 {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    background-color: rgb(209, 39, 39);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.705);
+}
+
+.menu1 {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    background-color: rgb(209, 39, 39);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.705);
+}
+
+.menu4 {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    background-color: rgb(209, 39, 39);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.705);
+}
+
+.menu2:hover {
+    background-color: rgb(106, 0, 0);
+    height: 51px;
+    font-size: 20px;
+}
+
+.menu3:hover {
+    background-color: rgb(106, 0, 0);
+    height: 51px;
+    font-size: 20px;
+}
+
+.menu1:hover {
+    background-color: rgb(106, 0, 0);
+    height: 51px;
+    font-size: 20px;
+}
+
+.menu4:hover {
+    background-color: rgb(106, 0, 0);
+    height: 51px;
+    font-size: 20px;
+}
+
+.contenido {
+    grid-area: contenido;
+    background-color: rgba(255, 255, 255, 0.679);
+    backdrop-filter: blur(7px);
+    height: 500px;
+    position: relative;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.705);
+}
+
+.aside {
+    grid-area: aside;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    display: grid;
+    text-align: center;
+    background-image: url(https://i.revistapym.com.co/old/2022/03/Segmento-de-moteros.png?w=728);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenidoaside{
+    grid-template-columns: auto;
+    width: 90%;
+    height: 90%;
+    background-color: rgba(255, 255, 255, 0.295);
+    backdrop-filter: blur(7px);
+    border-radius: 10px;
+    position: relative;
+}
+
+.botonapp{
+    width: 90%;
+    background-color: rgb(209, 39, 39);
+    height: 60px;
+    border-radius: 10px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.botonapp:hover{
+    background-color: rgb(106, 0, 0);
+}
+
+.widget1 {
+ 
+    text-align: center;
+    padding: 9px;
+    grid-area: widget1;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(2, 1fr);
+    background-color: rgba(209, 39, 39, 0.733);
+    backdrop-filter: blur(2px);
+    color: rgb(255, 255, 255);
+    height: 380px;
+    border-radius: 10px;
+}
+
+.texto {
+    position: absolute;
+    text-align: justify;
+}
+
+.widget2 {
+    grid-area: widget2;
+    text-align: center;
+    padding: 9px;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(2, 1fr);
+    background-color: rgba(209, 39, 39, 0.733);
+    backdrop-filter: blur(2px);
+    color: rgb(255, 255, 255);
+    height: 380px;
+    border-radius: 10px;
+}
+
+.widget3 {
+    text-align: center;
+    padding: 9px;
+    grid-area: widget3;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(2, 1fr);
+    background-color: rgba(209, 39, 39, 0.733);
+    backdrop-filter: blur(2px);
+    color: rgb(255, 255, 255);
+    height: 380px;
+    border-radius: 10px;
+}
+
+.widget4 {
+    grid-area: widget4;
+    background-color: rgb(255, 255, 255);
+    height: 230px;
+    border-radius: 10px;
+    background-image: url(/assets/images/publicidadwidget4.png);
+    background-size: cover;
+}
+
+.piedepagina {
+    grid-area: footer;
+    background-color: rgba(255, 255, 255, 0.679);
+    backdrop-filter: blur(4px);
+    height: 350px;
+    display: grid;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.RPM {
+    grid-column: span 3;
+    background-color: rgba(255, 188, 5, 0);
+    text-align: center;
+}
+.rayafooter{
+    width: 100%;
+    height: 1px;
+    background-color: rgb(65, 65, 65);
+    border: 5px;
+}
+.encuentranos{
+    -ms-grid-column-span: 3;
+}
+
+.tituloaside{
+    font-size: 30px; 
+    text-align: center;
+    padding-top: 50%;
+}
+
+
+
+
+@media screen and (max-width: 1350px) {
+    .container {
+        grid-template-areas: "header header header header" "nav nav nav nav" "contenido contenido contenido contenido" "aside aside aside aside" "widget1 widget1   widget1 widget1" "widget2 widget2   widget2 widget2" "widget3 widget3 widget3 widget3" "widget4 widget4 widget4 widget4" "footer footer footer footer";
+        width: 98%;
+    }
+    .aside {
+        height: 450px;
+    }
+    .tituloaside{
+        padding-top: 80px;
+    }
+    .titulo {
+        display: none;
+    }
+    .logo {
+        width: 50%;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .logo .logorpm {
+        width: 250px;
+    }
+    .cabeza {
+        height: 180px
+    }
+    .widget4{
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 65px;
+
+    }
+
+
+}
